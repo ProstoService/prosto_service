@@ -1,9 +1,10 @@
 <template>
-<div>
-<MainMenu></MainMenu>
-
-</div>
+  <div>
+    <MainMenu/>
+    Контакты
+  </div>
 </template>
+
 <script>
 import MainMenu from './Menu'
 

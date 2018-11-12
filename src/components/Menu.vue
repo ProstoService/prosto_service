@@ -1,15 +1,52 @@
-<template>
-<div>
-<router-link to="/">Главная</router-link>
-<router-link to="/about">О нас</router-link>
-<router-link to="/services">Услуги</router-link>
-<router-link to="/goods">Товары</router-link>
-<router-link to="/prices">Цены</router-link>
-<router-link to="/contacts">Контакты</router-link>
-</div>
+<template lang="html">
+  <sui-menu text>
+    <router-link
+      is="sui-menu-item"
+      v-for="item in items"
+      :key="item.content"
+      :content="item.content"
+      :active="isActive(item)"
+      :to="item.to"
+      @click="select(item)"
+    />
+  </sui-menu>
 </template>
+
 <script>
 export default {
-  name: 'MainMenu'
+  name: 'MainMenu',
+  data () {
+    return {
+      items: [
+        {
+          content: 'Главная', to: '/'
+        },
+        {
+          content: 'О нас', to: '/about'
+        },
+        {
+          content: 'Услуги', to: '/services'
+        },
+        {
+          content: 'Товары', to: '/goods'
+        },
+        {
+          content: 'Цены', to: '/prices'
+        },
+        {
+          content: 'Контакты', to: '/contacts'
+        }
+      ],
+      active: 'О нас'
+    }
+  },
+  methods: {
+    isActive (name) {
+      return this.active === name
+    },
+    select (name) {
+      this.active = name
+    }
+  }
 }
 </script>

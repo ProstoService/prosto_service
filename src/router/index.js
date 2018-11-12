@@ -7,6 +7,7 @@ import GoodsPage from '@/components/Goods'
 import PricesPage from '@/components/Prices'
 import ContactsPage from '@/components/Contacts'
 import NotFoundPage from '@/components/NotFound'
+import 'semantic-ui-css/semantic.min.css'
 
 Vue.use(Router)
 
