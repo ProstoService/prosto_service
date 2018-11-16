@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>О нас</h1>
-    {{ text }}
+    <img :src="photo" align="right" style="width: 30rem;"/>
+    <p>
+      {{ text }}
+    </p>
   </div>
 </template>
 
@@ -12,34 +15,36 @@ export default {
   name: 'AboutPage',
   data () {
     return {
+      photo: '',
       text: ''
     }
   },
   beforeRouteEnter (to, from, next) {
-    function getText () {
+    function getData () {
       return axios.get('/static/content/about.json')
     }
 
-    getText().then(response => {
+    getData().then(response => {
       next(vm =>
-        vm.setText(response.data.text)
+        vm.setData(response.data)
       )
     })
   },
   beforeRouteUpdate (to, from, next) {
-    function getText () {
+    function getData () {
       return axios.get('/static/content/about.json')
     }
 
-    getText().then(response => {
+    getData().then(response => {
       next(vm =>
-        vm.setText(response.data.text)
+        vm.setData(response.data)
       )
     })
   },
   methods: {
-    setText (text) {
-      this.text = text
+    setData (data) {
+      this.photo = data.photo
+      this.text = data.text
     }
   }
 }
