@@ -1,17 +1,46 @@
 <template>
   <div>
-    <MainMenu/>
-    О нас
+    <h1>О нас</h1>
+    {{ text }}
   </div>
 </template>
 
 <script>
-import MainMenu from './Menu'
+import axios from 'axios'
 
 export default {
   name: 'AboutPage',
-  components: {
-    MainMenu
+  data () {
+    return {
+      text: ''
+    }
+  },
+  beforeRouteEnter (to, from, next) {
+    function getText () {
+      return axios.get('/static/content/about.json')
+    }
+
+    getText().then(response => {
+      next(vm =>
+        vm.setText(response.data.text)
+      )
+    })
+  },
+  beforeRouteUpdate (to, from, next) {
+    function getText () {
+      return axios.get('/static/content/about.json')
+    }
+
+    getText().then(response => {
+      next(vm =>
+        vm.setText(response.data.text)
+      )
+    })
+  },
+  methods: {
+    setText (text) {
+      this.text = text
+    }
   }
 }
 </script>
