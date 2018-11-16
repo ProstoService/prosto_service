@@ -1,15 +1,17 @@
 <template lang="html">
-  <sui-menu text>
-    <router-link
-      is="sui-menu-item"
-      v-for="item in items"
-      :key="item.content"
-      :content="item.content"
-      :active="isActive(item)"
-      :to="item.to"
-      @click="select(item)"
-    />
-  </sui-menu>
+  <div class="ui secondary pointing menu">
+    <a
+        class="item"
+        is="router-link"
+        v-for="menuItem in menuItems"
+        :class="{active:isActive(menuItem.key)}"
+        :key="menuItem.key"
+        :to="menuItem.to"
+        @click.native="setActive(menuItem.key)"
+    >
+      {{ menuItem.content }}
+    </a>
+  </div>
 </template>
 
 <script>
@@ -17,35 +19,47 @@ export default {
   name: 'MainMenu',
   data () {
     return {
-      items: [
+      menuItems: [
         {
-          content: 'Главная', to: '/'
+          key: 'home',
+          content: 'Главная',
+          to: '/'
         },
         {
-          content: 'О нас', to: '/about'
+          key: 'about',
+          content: 'О нас',
+          to: '/about'
         },
         {
-          content: 'Услуги', to: '/services'
+          key: 'services',
+          content: 'Услуги',
+          to: '/services'
         },
         {
-          content: 'Товары', to: '/goods'
+          key: 'goods',
+          content: 'Товары',
+          to: '/goods'
         },
         {
-          content: 'Цены', to: '/prices'
+          key: 'prices',
+          content: 'Цены',
+          to: '/prices'
         },
         {
-          content: 'Контакты', to: '/contacts'
+          key: 'contacts',
+          content: 'Контакты',
+          to: '/contacts'
         }
       ],
-      active: 'О нас'
+      active: 'about'
     }
   },
   methods: {
-    isActive (name) {
-      return this.active === name
+    setActive (key) {
+      this.active = key
     },
-    select (name) {
-      this.active = name
+    isActive (key) {
+      return key === this.active
     }
   }
 }
