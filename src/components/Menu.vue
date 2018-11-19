@@ -1,16 +1,18 @@
 <template lang="html">
-  <div class="ui secondary pointing menu">
-    <a
-        class="item"
-        is="router-link"
-        v-for="menuItem in menuItems"
-        :class="{active:isActive(menuItem.key)}"
-        :key="menuItem.key"
-        :to="menuItem.to"
-        @click.native="setActive(menuItem.key)"
-    >
-      {{ menuItem.content }}
-    </a>
+  <div class="ui secondary fixed pointing menu">
+    <div class="ui text container">
+      <a
+          class="item"
+          is="router-link"
+          v-for="menuItem in menuItems"
+          :class="{active:isActive(menuItem.key)}"
+          :key="menuItem.key"
+          :to="menuItem.to"
+          @click.native="setActive(menuItem.key)"
+      >
+        {{ menuItem.content }}
+      </a>
+    </div>
   </div>
 </template>
 
@@ -67,3 +69,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .ui.secondary.menu {
+    background-color: rgba(255, 255, 255, 255);
+  }
+</style>
