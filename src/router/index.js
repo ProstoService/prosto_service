@@ -67,11 +67,14 @@ const router = new Router(
           }
         ]
       }
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   }
 )
 
-const globalTitle = 'Prosto Service'
+const globalTitle = 'Простое Решение'
 
 router.beforeEach((to, from, next) => {
   if (to.meta.title === '') {

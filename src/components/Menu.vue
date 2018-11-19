@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="ui secondary fixed pointing menu">
+  <div class="ui secondary fixed pointing menu" style="background-color: rgba(255, 255, 255, 255);">
     <div class="ui text container">
       <a
           class="item"
@@ -69,9 +69,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  .ui.secondary.menu {
-    background-color: rgba(255, 255, 255, 255);
-  }
-</style>

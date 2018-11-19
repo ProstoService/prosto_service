@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="content">
     <h1>О нас</h1>
     <img :src="photo" align="right" style="width: 20rem; margin-left: 1rem;"/>
-    <p>
-      {{ text }}
+    <p
+      v-for="(paragraph, index) in paragraphs"
+      :key="index">
+      {{ paragraph }}
     </p>
   </div>
 </template>
@@ -16,7 +18,7 @@ export default {
   data () {
     return {
       photo: '',
-      text: ''
+      paragraphs: []
     }
   },
   beforeRouteEnter (to, from, next) {
@@ -44,7 +46,7 @@ export default {
   methods: {
     setData (data) {
       this.photo = data.photo
-      this.text = data.text
+      this.paragraphs = data.paragraphs
     }
   }
 }

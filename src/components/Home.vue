@@ -2,20 +2,25 @@
   <div class="landing">
     <div class="centered">
       <div class="ui one column grid">
-        <div class="center aligned one column row">
+        <div class="center aligned one column row" style="padding-bottom: 0px;">
           <div class="column">
-            <h1 style="font-style: bold; color: white; font-size: 5rem;">PROSTO SERVICE</h1>
+            <h1 style="font-size: 3.5rem; margin-top: 0.9em;">МАСТЕРСКАЯ</h1>
+          </div>
+        </div>
+        <div class="center aligned one column row" style="padding-top: 0px;padding-bottom: 0px;">
+          <div class="column">
+            <h2 style="font-size: 4.5rem; margin-top: 0px;">"ПРОСТОЕ РЕШЕНИЕ"</h2>
           </div>
         </div>
         <div class="center aligned one column row">
           <div class="column">
             <a
               is="router-link"
-              class="large ui basic inverted button"
+              class="large ui basic secondary button"
               to="/about"
-              style="font-style: bold; color: white; font-size: 1.5rem;"
+              style="font-style: bold; font-size: 1.5rem;"
             >
-              О нас
+              Войти
             </a>
           </div>
         </div>
@@ -33,7 +38,7 @@ export default {
 <style scoped>
   .centered {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       height: 100vh;
   }

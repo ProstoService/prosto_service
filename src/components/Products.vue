@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <h1>Товары</h1>
     <div class="ui divided items">
       <div

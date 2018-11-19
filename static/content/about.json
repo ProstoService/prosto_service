@@ -1,4 +1,10 @@
 {
     "photo": "/static/images/a_warhammer_axe_by_rddm12_9_7-d86uoce.png",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis mattis nibh. Morbi mauris libero, porttitor ut mollis et, malesuada id ligula. Etiam viverra felis et mollis dictum. Maecenas id justo eget erat pharetra tincidunt eu ac lacus. Duis a laoreet quam. Quisque ac nulla odio. In volutpat leo risus, auctor vestibulum ipsum maximus quis. Sed eleifend sodales lacus, nec pellentesque metus ultrices finibus. Suspendisse quis tempor dui. Quisque aliquam dui a ligula porta porta. Nullam placerat nulla ac commodo rhoncus. Fusce nec leo ex. Nullam vel eros est. Nam sed vestibulum nibh, et bibendum justo. Nam et tincidunt nunc."
+    "paragraphs": [
+        "Мастерская \"Простое Решение\" основана в 2009 году. Всё это время мы стараемся предоставлять качественное обслуживание своим клиентам, совершенствовать своё мастерство и расширять спектр услуг.",
+        "Спасибо всем, кто когда-либо обращался к нам с той или иной проблемой.",
+        "Мы ценим ваше доверие!",
+        "В нашей мастерской вы можете получить следующие услуги: Срочное изготовление ключей (квартирных, домофонных, гаражных, автомобильных, в том числе с чипом), заточка ножей, ножниц, ножей мясорубок, секаторов, лопат, топоров, ножей газонокосилок, ножей фуганков и рейсмусов, цепей бензопил, стамесок, ножей рубанков, ледобуров, коньков.",
+        "Также выполняем качественный ремонт бытовых швейных машин, опыт работы в этом направлении - более 20 лет. В дополнение к нашим услугам вы всегда можете приобрести в нашей мастерской брелки для ключей, замки, сертифицированные охотничьи и туристские ножи производства г. Ворсма, ремни, лампы и масло для швейных машин, ключницы ручной работы. Добро пожаловать в мастерскую \"Простое Решение\"!"
+    ]
 }

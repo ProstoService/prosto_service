@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="content">
     <h1>Услуги</h1>
     <div class="ui divided items">
       <div
@@ -14,17 +14,23 @@
           <div class="header">
             {{ service.name }}
           </div>
-          <div class="meta">
+          <div class="meta"
+            v-if="service.meta"
+          >
+            {{ service.meta }}
+          </div>
+          <div class="description">
+            <p>{{ service.description }}</p>
+          </div>
+          <div class="extra">
             <a
               target="_blank"
+              v-if="service.video"
               :href="service.video"
             >
               <i class="youtube icon"/>
               Видео
             </a>
-          </div>
-          <div class="description">
-            <p>{{ service.description }}</p>
           </div>
         </div>
         <div class="ui divider"></div>
