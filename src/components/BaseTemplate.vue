@@ -1,7 +1,11 @@
 <template>
-  <div class="ui text container">
-    <MainMenu/>
-    <router-view/>
+  <div>
+    <div class="pusher">
+      <MainMenu/>
+      <div class="ui text container" style="margin-top: 4rem;">
+        <router-view/>
+      </div>
+    </div>
     <Footer/>
   </div>
 </template>

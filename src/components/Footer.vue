@@ -1,5 +1,8 @@
 <template>
-  <div style="height: 3rem;"></div>
+  <div class="footer" style="height: 30px;">
+    <div class="ui text container">
+    </div>
+  </div>
 </template>
 
 <script>
