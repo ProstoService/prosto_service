@@ -4,16 +4,19 @@
       <div class="ui one column grid">
         <div class="center aligned one column row">
           <div class="column">
-            <h1 style="font-style: bold:">PROSTO SERVICE</h1>
+            <h1 style="font-style: bold; color: white; font-size: 5rem;">PROSTO SERVICE</h1>
           </div>
         </div>
         <div class="center aligned one column row">
           <div class="column">
-            <router-link to="/about">
-              <sui-button basic>
-                О нас
-              </sui-button>
-            </router-link>
+            <a
+              is="router-link"
+              class="large ui basic inverted button"
+              to="/about"
+              style="font-style: bold; color: white; font-size: 1.5rem;"
+            >
+              О нас
+            </a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>О нас</h1>
-    <img :src="photo" align="right" style="width: 30rem;"/>
+    <img :src="photo" align="right" style="width: 20rem; margin-left: 1rem;"/>
     <p>
       {{ text }}
     </p>

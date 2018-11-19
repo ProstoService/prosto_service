@@ -36,14 +36,9 @@ export default {
           to: '/services'
         },
         {
-          key: 'goods',
+          key: 'products',
           content: 'Товары',
-          to: '/goods'
-        },
-        {
-          key: 'prices',
-          content: 'Цены',
-          to: '/prices'
+          to: '/products'
         },
         {
           key: 'contacts',
@@ -51,7 +46,15 @@ export default {
           to: '/contacts'
         }
       ],
-      active: 'about'
+      active: ''
+    }
+  },
+  created () {
+    this.active = this.$router.currentRoute.path.substring(1)
+  },
+  watch: {
+    '$route' (to, from) {
+      this.active = to.path.substring(1)
     }
   },
   methods: {
@@ -59,7 +62,7 @@ export default {
       this.active = key
     },
     isActive (key) {
-      return key === this.active
+      return (key === this.active)
     }
   }
 }

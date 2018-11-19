@@ -1,11 +1,9 @@
 <template>
-  <div>
-    Цены
-  </div>
+  <div style="height: 3rem;"></div>
 </template>
 
 <script>
 export default {
-  name: 'PricesPage'
+  name: 'Footer'
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Услуги</h1>
-    <div class="ui items">
+    <div class="ui divided items">
       <div
         class="item"
         v-for="service in services"
@@ -11,76 +11,60 @@
           <img :src="service.image">
         </div>
         <div class="content">
-          <a
-            class="header"
-            @click="showModal(service.youtubeKey)"
-          >
+          <div class="header">
             {{ service.name }}
-          </a>
+          </div>
+          <div class="meta">
+            <a
+              target="_blank"
+              :href="service.video"
+            >
+              <i class="youtube icon"/>
+              Видео
+            </a>
+          </div>
           <div class="description">
             <p>{{ service.description }}</p>
           </div>
         </div>
+        <div class="ui divider"></div>
       </div>
     </div>
-    <VueSemanticUiModal class="small" :active="isStandardActive" @update:active="val => isStandardActive = val">
-      <p slot="header">Confirmation needed</p>
-
-      <div slot="content">
-        <div class="ui embed" data-source="youtube" :data-id="youtubeKey">
-        </div>
-      </div>
-    </VueSemanticUiModal>
   </div>
 </template>
 
 <script>
-import VueSemanticUiModal from 'vue-semantic-modal'
 import axios from 'axios'
 
 export default {
   name: 'ServicesPage',
   data () {
     return {
-      services: null,
-      isStandardActive: false,
-      youtubeKey: ''
+      services: null
     }
   },
   beforeRouteEnter (to, from, next) {
-    function getServices () {
-      return axios.get('/static/content/services.json')
-    }
-
-    getServices().then(response => {
+    axios.get('/static/content/services.json').then(response => {
       next(vm =>
         vm.setServices(response.data.services)
       )
+    }).catch(error => {
+      console.log(error)
     })
   },
   beforeRouteUpdate (to, from, next) {
-    function getServices () {
-      return axios.get('/static/content/about.json')
-    }
-
-    getServices().then(response => {
+    axios.get('/static/content/services.json').then(response => {
       next(vm =>
         vm.setServices(response.data.services)
       )
+    }).catch(error => {
+      console.log(error)
     })
   },
   methods: {
     setServices (services) {
       this.services = services
-    },
-    showModal (youtubeKey) {
-      console.log(youtubeKey)
-      this.youtubeKey = youtubeKey
-      this.isStandardActive = true
     }
-  },
-  components: {
-    VueSemanticUiModal
   }
 }
 </script>

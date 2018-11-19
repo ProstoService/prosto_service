@@ -1,66 +1,67 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BaseTemplate from '@/components/BaseTemplate'
-import HomePage from '@/components/Home'
-import AboutPage from '@/components/About'
-import ServicesPage from '@/components/Services'
-import GoodsPage from '@/components/Goods'
-import PricesPage from '@/components/Prices'
-import ContactsPage from '@/components/Contacts'
-import NotFoundPage from '@/components/NotFound'
+import NProgress from 'nprogress'
 
 Vue.use(Router)
 
-export default new Router(
+const router = new Router(
   {
     routes: [
       {
         path: '/',
         name: 'Home',
-        component: HomePage
+        component: () => import('@/components/Home')
       },
       {
         path: '/',
-        component: BaseTemplate,
+        component: () => import('@/components/BaseTemplate'),
         children: [
           {
             path: 'about',
             name: 'About',
-            component: AboutPage
+            component: () => import('@/components/About')
           },
           {
             path: 'services',
             name: 'Service',
-            component: ServicesPage
+            component: () => import('@/components/Services')
           },
           {
-            path: 'goods',
-            name: 'Goods',
-            component: GoodsPage
-          },
-          {
-            path: 'prices',
-            name: 'Prices',
-            component: PricesPage
+            path: 'products',
+            name: 'Products',
+            component: () => import('@/components/Products')
           },
           {
             path: 'contacts',
             name: 'Contacts',
-            component: ContactsPage
+            component: () => import('@/components/Contacts')
           }
         ]
       },
       {
         path: '*',
-        component: BaseTemplate,
+        component: () => import('@/components/BaseTemplate'),
         children: [
           {
             path: '',
             name: 'NotFound',
-            component: NotFoundPage
+            component: () => import('@/components/NotFound')
           }
         ]
       }
     ]
   }
 )
+
+router.beforeResolve((to, from, next) => {
+  if (to.name) {
+    NProgress.start()
+  }
+  next()
+})
+
+router.afterEach((to, from) => {
+  NProgress.done()
+})
+
+export default router

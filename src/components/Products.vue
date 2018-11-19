@@ -1,22 +1,22 @@
 <template>
   <div>
     <h1>Товары</h1>
-    <div class="ui items">
+    <div class="ui divided items">
       <div
         class="item"
-        v-for="good in goods"
-        :key="good.name"
+        v-for="product in products"
+        :key="product.name"
       >
         <div class="image" style="width: 7rem; height: 7rem;">
-          <img :src="good.image">
+          <img :src="product.image">
         </div>
         <div class="content">
-          <div class="header">{{ good.name }}</div>
+          <div class="header">{{ product.name }}</div>
           <div class="meta">
-            <span class="price">{{ good.price }} руб.</span>
+            <span class="price">{{ product.price }} руб.</span>
           </div>
           <div class="description">
-            <p>{{ good.description }}</p>
+            <p>{{ product.description }}</p>
           </div>
         </div>
       </div>
@@ -28,37 +28,37 @@
 import axios from 'axios'
 
 export default {
-  name: 'GoodsPage',
+  name: 'productsPage',
   data () {
     return {
-      goods: null
+      products: null
     }
   },
   beforeRouteEnter (to, from, next) {
-    function getGoods () {
-      return axios.get('/static/content/goods.json')
+    function getproducts () {
+      return axios.get('/static/content/products.json')
     }
 
-    getGoods().then(response => {
+    getproducts().then(response => {
       next(vm =>
-        vm.setGoods(response.data.goods)
+        vm.setproducts(response.data.products)
       )
     })
   },
   beforeRouteUpdate (to, from, next) {
-    function getGoods () {
+    function getproducts () {
       return axios.get('/static/content/about.json')
     }
 
-    getGoods().then(response => {
+    getproducts().then(response => {
       next(vm =>
-        vm.setGoods(response.data.goods)
+        vm.setproducts(response.data.products)
       )
     })
   },
   methods: {
-    setGoods (goods) {
-      this.goods = goods
+    setproducts (products) {
+      this.products = products
     }
   }
 }
