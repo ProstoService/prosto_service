@@ -23,6 +23,30 @@
             "name": "DDD",
             "description": "Donec lobortis et est ut pharetra. Mauris a lorem blandit, interdum magna et, venenatis erat. Donec pulvinar quam dui, at gravida elit viverra ut. Pellentesque sed faucibus augue. Sed commodo ipsum sed magna commodo lacinia.",
             "price": "40"
+        },
+        {
+            "image": "/static/images/CandyGift.png",
+            "name": "AAA",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id pulvinar ligula, ac rhoncus est. Nullam suscipit, risus eu varius gravida, odio nibh volutpat metus, a rhoncus dui ipsum eget diam. Curabitur mollis justo non dui suscipit accumsan.",
+            "price": "10"
+        },
+        {
+            "image": "/static/images/CandyGift.png",
+            "name": "BBB",
+            "description": "Integer fermentum commodo aliquet. Maecenas vel mi id lectus aliquam maximus eu quis nisi. Ut porttitor, neque non vulputate aliquam, tortor leo tincidunt ante, vel fringilla mi dui ac massa. Nunc ultrices sit amet sem sit amet aliquam. Vestibulum nec faucibus lorem. Sed ultricies metus a lorem pretium cursus.",
+            "price": "20"
+        },
+        {
+            "image": "/static/images/CandyGift.png",
+            "name": "CCC",
+            "description": "Maecenas quis sodales velit. Morbi at nisl sapien. Morbi ut nibh ac ligula rhoncus mollis eu at felis. Praesent venenatis, quam sed molestie sollicitudin, sem libero cursus ante, ut scelerisque diam dolor eget risus.",
+            "price": "30"
+        },
+        {
+            "image": "/static/images/CandyGift.png",
+            "name": "DDD",
+            "description": "Donec lobortis et est ut pharetra. Mauris a lorem blandit, interdum magna et, venenatis erat. Donec pulvinar quam dui, at gravida elit viverra ut. Pellentesque sed faucibus augue. Sed commodo ipsum sed magna commodo lacinia.",
+            "price": "40"
         }
     ]
 }
