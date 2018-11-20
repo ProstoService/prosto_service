@@ -4,12 +4,12 @@
       <div class="ui one column grid">
         <div class="center aligned one column row" style="padding-bottom: 0px;">
           <div class="column">
-            <h1 style="font-size: 3.5rem; margin-top: 0.9em;">МАСТЕРСКАЯ</h1>
+            <h1 style="color: #1e1d1e; font-size: 3.5rem; margin-top: 0.9em;">МАСТЕРСКАЯ</h1>
           </div>
         </div>
         <div class="center aligned one column row" style="padding-top: 0px;padding-bottom: 0px;">
           <div class="column">
-            <h2 style="font-size: 4.5rem; margin-top: 0px;">"ПРОСТОЕ РЕШЕНИЕ"</h2>
+            <h2 style="color: #1e1d1e; font-size: 4.5rem; margin-top: 0px;">"ПРОСТОЕ РЕШЕНИЕ"</h2>
           </div>
         </div>
         <div class="center aligned one column row">
@@ -18,7 +18,7 @@
               is="router-link"
               class="large ui basic secondary button"
               to="/about"
-              style="font-style: bold; font-size: 1.5rem;"
+              style="color: #1e1d1e; font-style: bold; font-size: 1.5rem;"
             >
               Войти
             </a>
