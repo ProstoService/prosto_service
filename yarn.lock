@@ -7435,6 +7435,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-error-page@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/vue-error-page/-/vue-error-page-1.1.7.tgz#7993726512eccfa859262e47a7e8f553e33fb490"
+  integrity sha512-hv0bovgm6lyzD3Wc1eEQ8Pso58oRz1zg8YNPRtNUE+msnoN8rOFHoqmnUpyyM5LrahKuKeMBSsCu/MqDiPr4Bg==
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"

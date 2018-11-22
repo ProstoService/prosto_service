@@ -1,7 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
+import ErrorPage from "vue-error-page";
 import NProgress from "nprogress";
 
+Vue.use(ErrorPage);
 Vue.use(Router);
 
 const router = new Router({
@@ -96,6 +98,14 @@ router.beforeResolve((to, from, next) => {
 // eslint-disable-next-line no-unused-vars
 router.afterEach((to, from) => {
   NProgress.done();
+});
+
+import NotFound from "@/views/NotFound";
+
+router.onError(error => {
+  // eslint-disable-next-line no-console
+  console.log(error, error.response.status);
+  this.$_error(NotFound);
 });
 
 export default router;

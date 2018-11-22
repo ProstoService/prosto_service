@@ -36,7 +36,7 @@ export default {
         next(vm => vm.setProducts(response.data.products));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   // eslint-disable-next-line no-unused-vars
@@ -47,7 +47,7 @@ export default {
         next(vm => vm.setProducts(response.data.products));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   methods: {

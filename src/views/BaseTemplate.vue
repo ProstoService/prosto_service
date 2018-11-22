@@ -3,7 +3,7 @@
     <div>
       <main-menu />
       <div class="ui text container" style="margin-top: 4rem;">
-        <router-view />
+        <app-view />
       </div>
     </div>
   </div>

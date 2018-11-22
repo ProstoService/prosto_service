@@ -40,7 +40,7 @@ export default {
         next(vm => vm.setData(response.data));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   // eslint-disable-next-line no-unused-vars
@@ -51,7 +51,7 @@ export default {
         next(vm => vm.setData(response.data));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   methods: {
