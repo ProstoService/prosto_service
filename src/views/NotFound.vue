@@ -6,7 +6,7 @@
         <p style="font-size: 2em;">Страница, которую вы искали не найдена.</p>
       </div>
       <div class="column">
-        <i class="exclamation triangle icon" style="font-size: 10em;"/>
+        <i class="exclamation triangle icon" style="font-size: 10em;" />
       </div>
     </div>
   </div>
@@ -14,6 +14,6 @@
 
 <script>
 export default {
-  name: 'NotFoundPage'
-}
+  name: "NotFoundPage"
+};
 </script>

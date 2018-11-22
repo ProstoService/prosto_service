@@ -4,12 +4,19 @@
       <div class="ui one column grid">
         <div class="center aligned one column row" style="padding-bottom: 0px;">
           <div class="column">
-            <h1 style="color: #1e1d1e; font-size: 3.5rem; margin-top: 0.9em;">МАСТЕРСКАЯ</h1>
+            <h1 style="color: #1e1d1e; font-size: 3.5rem; margin-top: 0.9em;">
+              МАСТЕРСКАЯ
+            </h1>
           </div>
         </div>
-        <div class="center aligned one column row" style="padding-top: 0px;padding-bottom: 0px;">
+        <div
+          class="center aligned one column row"
+          style="padding-top: 0px;padding-bottom: 0px;"
+        >
           <div class="column">
-            <h2 style="color: #1e1d1e; font-size: 4.5rem; margin-top: 0px;">"ПРОСТОЕ РЕШЕНИЕ"</h2>
+            <h2 style="color: #1e1d1e; font-size: 4.5rem; margin-top: 0px;">
+              "ПРОСТОЕ РЕШЕНИЕ"
+            </h2>
           </div>
         </div>
         <div class="center aligned one column row">
@@ -31,20 +38,20 @@
 
 <script>
 export default {
-  name: 'HomePage'
-}
+  name: "HomePage"
+};
 </script>
 
 <style scoped>
-  .centered {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      height: 100vh;
-  }
+.centered {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+}
 
-  .landing {
-    background-image: url('../../static/images/landing.jpeg');
-    background-size: cover;
-  }
+.landing {
+  background-image: url("../../public/static/img/landing.jpeg");
+  background-size: cover;
+}
 </style>
