@@ -1,29 +1,22 @@
-# prosto_service
+# Сайт мастерской "Простое Решение"
+[![Build Status](https://travis-ci.com/ProstoService/prosto_service_frontend.svg?branch=master)](https://travis-ci.com/ProstoService/prosto_service_frontend)
 
-## Project setup
+### Установка зависимостей проекта
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Разработка на локальном сервере
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### Сборка для развертывания
 ```
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
+### Проверка на ошибки / плохое форматирование
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
