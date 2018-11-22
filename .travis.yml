@@ -1,0 +1,24 @@
+
+language: node_js
+node_js:
+  - "9"
+
+install: yarn
+
+cache: yarn
+
+script:
+  - yarn run build
+
+deploy:
+  provider: pages
+  project-name: ProstoService/prosto_service_frontend
+  repo: ProstoService/prostoservice.github.io
+  local-dir: dist/
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  target-branch: master
+  keep-history: true
+  allow-empty-commit: true
+  on:
+    branch: master
