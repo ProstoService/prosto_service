@@ -8,6 +8,7 @@ install: yarn
 cache: yarn
 
 script:
+  - cd public/static && git checkout master && git pull && cd -
   - yarn run build
 
 deploy:
