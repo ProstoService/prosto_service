@@ -8,18 +8,16 @@ install: yarn
 cache: yarn
 
 script:
-  - cd public/static && git checkout master && git pull && cd -
   - yarn run build
 
 deploy:
   provider: pages
-  project-name: ProstoService/prosto_service_frontend
+  project-name: ProstoService/prosto_service
   repo: ProstoService/prostoservice.github.io
   local-dir: dist/
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   target-branch: master
   keep-history: true
-  allow-empty-commit: true
   on:
     branch: master

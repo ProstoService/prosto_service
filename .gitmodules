@@ -1,4 +1,0 @@
-[submodule "static"]
-	path = public/static
-	url = https://github.com/ProstoService/prosto_service_static.git
-	branch = master
