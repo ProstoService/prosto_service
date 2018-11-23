@@ -2,9 +2,9 @@
   <div>
     <div>
       <main-menu />
-      <div class="ui text container" style="margin-top: 4rem;">
+      <main class="ui text content container" style="margin-top: 4rem;">
         <router-view />
-      </div>
+      </main>
     </div>
   </div>
 </template>
@@ -19,3 +19,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .content {
+    padding-bottom: 1.5rem;
+  }
+</style>
