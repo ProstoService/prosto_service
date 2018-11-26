@@ -1,5 +1,5 @@
 # Сайт мастерской "Простое Решение"
-[![Build Status](https://travis-ci.com/ProstoService/prosto_service_frontend.svg?branch=master)](https://travis-ci.com/ProstoService/prosto_service_frontend)
+[![Build Status](https://travis-ci.com/ProstoService/prosto_service.svg?branch=master)](https://travis-ci.com/ProstoService/prosto_service)
 
 ### Установка зависимостей проекта
 ```
