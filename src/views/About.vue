@@ -1,8 +1,28 @@
 <template>
   <div class="content">
     <h1>О нас</h1>
-    <img :src="photo" align="right" style="width: 20rem; margin-left: 1rem;" />
-    <p v-for="(paragraph, index) in paragraphs" :key="index">{{ paragraph }}</p>
+    <div class="ui grid">
+      <div class="computer tablet only row">
+        <div class="column">
+          <img class="ui medium right floated image" :src="photo" />
+          <p v-for="(paragraph, index) in paragraphs" :key="index">
+            {{ paragraph }}
+          </p>
+        </div>
+      </div>
+      <div class="mobile only row">
+        <div class="column">
+          <img
+            class="ui centered image"
+            :src="photo"
+            style="padding-bottom: 0.5rem;"
+          />
+          <p v-for="(paragraph, index) in paragraphs" :key="index">
+            {{ paragraph }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

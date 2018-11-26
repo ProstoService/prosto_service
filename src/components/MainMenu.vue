@@ -1,25 +1,55 @@
 <template lang="html">
   <nav
-    class="ui secondary fixed pointing menu"
+    class="ui fixed secondary pointing menu"
     style="background-color: rgba(255, 255, 255, 255);"
   >
     <div class="ui text container">
-      <a
-        class="item"
-        is="router-link"
-        v-for="menuItem in menuItems"
-        :class="{ active: isActive(menuItem.key) }"
-        :key="menuItem.key"
-        :to="menuItem.to"
-        @click.native="setActive(menuItem.key);"
-      >
-        {{ menuItem.content }}
-      </a>
+      <div class="ui grid">
+        <div class="computer only row">
+          <a
+            class="item"
+            is="router-link"
+            v-for="menuItem in menuItems"
+            :class="{ active: isActive(menuItem.key) }"
+            :key="menuItem.key"
+            :to="menuItem.to"
+            @click.native="setActive(menuItem.key);"
+          >
+            {{ menuItem.content }}
+          </a>
+        </div>
+        <div class="mobile tablet only row">
+          <a class="active launch icon item" @click="toggleSidebar();">
+            <i
+              class="content icon"
+              style="padding-left: 50%;padding-right: 50%;"
+            />
+          </a>
+          <div class="ui sidebar vertical menu">
+            <a
+              class="item"
+              is="router-link"
+              v-for="menuItem in menuItems"
+              :class="{ active: isActive(menuItem.key) }"
+              :key="menuItem.key"
+              :to="menuItem.to"
+              @click.native="
+                setActive(menuItem.key);
+                toggleSidebar();
+              "
+            >
+              {{ menuItem.content }}
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
+import $ from "jquery";
+
 export default {
   name: "MainMenu",
   data() {
@@ -69,6 +99,9 @@ export default {
     },
     isActive(key) {
       return key === this.active;
+    },
+    toggleSidebar() {
+      $(".ui.sidebar").sidebar("toggle");
     }
   }
 };

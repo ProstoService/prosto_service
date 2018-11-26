@@ -1,11 +1,9 @@
 <template>
-  <div class="content">
+  <div>
     <h1>Товары</h1>
     <div class="ui divided items">
       <div class="item" v-for="(product, index) in products" :key="index">
-        <div class="image" style="width: 7rem; height: 7rem;">
-          <img :src="product.image" />
-        </div>
+        <div class="ui small image"><img :src="product.image" /></div>
         <div class="content">
           <div class="header">{{ product.name }}</div>
           <div class="meta" v-if="product.meta">{{ product.meta }}</div>

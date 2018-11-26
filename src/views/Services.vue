@@ -3,9 +3,7 @@
     <h1>Услуги</h1>
     <div class="ui divided items">
       <div class="item" v-for="(service, index) in services" :key="index">
-        <div class="image" style="width: 7rem; height: 7rem;">
-          <img :src="service.image" />
-        </div>
+        <div class="ui small image"><img :src="service.image" /></div>
         <div class="content">
           <div class="header">{{ service.name }}</div>
           <div class="meta" v-if="service.meta">{{ service.meta }}</div>
@@ -18,7 +16,6 @@
             </a>
           </div>
         </div>
-        <div class="ui divider"></div>
       </div>
     </div>
   </div>

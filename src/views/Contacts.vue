@@ -9,17 +9,12 @@
     </div>
 
     <h2>Мы на карте</h2>
-    <iframe
-      :src="map"
-      width="560"
-      height="400"
-      frameborder="0"
-      allowfullscreen="true"
-    />
+    <div class="ui embed"></div>
   </div>
 </template>
 
 <script>
+import $ from "jquery";
 import axios from "axios";
 
 export default {
@@ -28,9 +23,18 @@ export default {
     return {
       phone: "",
       address: "",
-      email: "",
-      map: ""
+      email: ""
     };
+  },
+  computed: {
+    map: {
+      get() {
+        return "";
+      },
+      set(value) {
+        $(".ui.embed").embed({ url: value });
+      }
+    }
   },
   // eslint-disable-next-line no-unused-vars
   beforeRouteEnter(to, from, next) {

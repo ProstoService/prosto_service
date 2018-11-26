@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>
+    <div class="pusher">
       <main-menu />
-      <main class="ui text content container" style="margin-top: 4rem;">
+      <main class="ui text expanded container" style="margin-top: 4rem;">
         <router-view />
       </main>
     </div>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-.content {
+.expanded {
   padding-bottom: 1.5rem;
 }
 </style>
