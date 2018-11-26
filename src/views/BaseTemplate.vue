@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style scoped>
-  .content {
-    padding-bottom: 1.5rem;
-  }
+.content {
+  padding-bottom: 1.5rem;
+}
 </style>
