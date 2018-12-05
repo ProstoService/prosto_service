@@ -48,9 +48,6 @@
 </template>
 
 <script>
-import $ from "jquery";
-import "semantic-ui-css/components/sidebar.min.js";
-
 export default {
   name: "MainMenu",
   data() {
@@ -102,7 +99,7 @@ export default {
       return key === this.active;
     },
     toggleSidebar() {
-      $(".ui.sidebar").sidebar("toggle");
+      eval("$('.ui.sidebar').sidebar('toggle');");
     }
   }
 };

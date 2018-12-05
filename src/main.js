@@ -1,12 +1,9 @@
 import Vue from "vue";
 import VueProgressBar from "vue-progressbar";
 import ErrorPage from "vue-error-page";
-import jquery from "jquery";
 
 import App from "./App.vue";
 import router from "./router";
-
-window.$ = window.jQuery = jquery;
 
 Vue.config.productionTip = false;
 

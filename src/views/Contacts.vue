@@ -14,9 +14,7 @@
 </template>
 
 <script>
-import $ from "jquery";
 import axios from "axios";
-import "semantic-ui-css/components/embed.min.js";
 
 export default {
   name: "ContactsPage",
@@ -33,7 +31,7 @@ export default {
         return "";
       },
       set(value) {
-        $(".ui.embed").embed({ url: value });
+        eval("$('.ui.embed').embed({ url: '" + value + "' });");
       }
     }
   },
