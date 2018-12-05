@@ -26,7 +26,7 @@ export default {
   name: "productsPage",
   data() {
     return {
-      products: null
+      products: []
     };
   },
   // eslint-disable-next-line no-unused-vars

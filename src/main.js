@@ -8,7 +8,8 @@ window.$ = window.jQuery = jquery;
 
 Vue.config.productionTip = false;
 
-require("semantic-ui-css/semantic.min.css");
-require("semantic-ui-css/semantic.min.js");
-
-new Vue({ router, render: h => h(App) }).$mount("#app");
+new Vue({
+  el: "#app",
+  router,
+  render: h => h(App)
+});

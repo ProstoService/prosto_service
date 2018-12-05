@@ -92,7 +92,7 @@ export default {
 }
 
 .landing {
-  background-image: url("../../public/static/img/landing.jpeg");
+  background-image: url("../assets/landing.jpeg");
   background-size: cover;
   position: absolute;
   height: 100vh;

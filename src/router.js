@@ -2,6 +2,14 @@ import Vue from "vue";
 import Router from "vue-router";
 import NProgress from "nprogress";
 
+const Home = () => import("@/views/Home");
+const BaseTemplate = () => import("@/views/BaseTemplate");
+const About = () => import("@/views/About");
+const Services = () => import("@/views/Services");
+const Products = () => import("@/views/Products");
+const Contacts = () => import("@/views/Contacts");
+const NotFound = () => import("@/views/NotFound");
+
 Vue.use(Router);
 
 const router = new Router({
@@ -9,27 +17,27 @@ const router = new Router({
     {
       path: "/",
       name: "Home",
-      component: () => import("@/views/Home"),
+      component: Home,
       meta: {
         title: ""
       }
     },
     {
       path: "/",
-      component: () => import("@/views/BaseTemplate"),
+      component: BaseTemplate,
       children: [
         {
           path: "about",
           name: "About",
-          component: () => import("@/views/About"),
+          component: About,
           meta: {
             title: "О нас"
           }
         },
         {
           path: "services",
-          name: "Service",
-          component: () => import("@/views/Services"),
+          name: "Services",
+          component: Services,
           meta: {
             title: "Услуги"
           }
@@ -37,7 +45,7 @@ const router = new Router({
         {
           path: "products",
           name: "Products",
-          component: () => import("@/views/Products"),
+          component: Products,
           meta: {
             title: "Товары"
           }
@@ -45,7 +53,7 @@ const router = new Router({
         {
           path: "contacts",
           name: "Contacts",
-          component: () => import("@/views/Contacts"),
+          component: Contacts,
           meta: {
             title: "Контакты"
           }
@@ -54,12 +62,12 @@ const router = new Router({
     },
     {
       path: "*",
-      component: () => import("@/views/BaseTemplate"),
+      component: BaseTemplate,
       children: [
         {
           path: "",
           name: "NotFound",
-          component: () => import("@/views/NotFound"),
+          component: NotFound,
           meta: {
             title: "Страница не найдена"
           }

@@ -31,7 +31,7 @@ export default {
   name: "ServicesPage",
   data() {
     return {
-      services: null
+      services: []
     };
   },
   // eslint-disable-next-line no-unused-vars
