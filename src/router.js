@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import NProgress from "nprogress";
 
 const Home = () => import("@/views/Home");
 const BaseTemplate = () => import("@/views/BaseTemplate");
@@ -79,31 +78,6 @@ const router = new Router({
   scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 };
   }
-});
-
-const globalTitle = "Простое Решение";
-
-// eslint-disable-next-line no-unused-vars
-router.beforeEach((to, from, next) => {
-  if (to.meta.title === "") {
-    document.title = globalTitle;
-  } else {
-    document.title = to.meta.title + " | " + globalTitle;
-  }
-  next();
-});
-
-// eslint-disable-next-line no-unused-vars
-router.beforeResolve((to, from, next) => {
-  if (to.name) {
-    NProgress.start();
-  }
-  next();
-});
-
-// eslint-disable-next-line no-unused-vars
-router.afterEach((to, from) => {
-  NProgress.done();
 });
 
 export default router;

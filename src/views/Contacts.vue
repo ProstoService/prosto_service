@@ -16,7 +16,7 @@
 <script>
 import $ from "jquery";
 import axios from "axios";
-import "semantic-ui-css/components/embed.min.js"
+import "semantic-ui-css/components/embed.min.js";
 
 export default {
   name: "ContactsPage",
