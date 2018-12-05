@@ -12,6 +12,7 @@ const NotFound = () => import("@/views/ErrorPage");
 Vue.use(Router);
 
 const router = new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
