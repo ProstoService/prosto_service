@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .expanded {
-  margin-top: 4rem;
+  padding-top: 4rem;
   padding-bottom: 1.5rem;
 }
 </style>
