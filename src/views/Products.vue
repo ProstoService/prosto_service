@@ -13,6 +13,9 @@
         </div>
       </div>
     </div>
+    <div v-if="products.length == 0">
+      Здесь пока ничего нет, но очень скоро появится!
+    </div>
   </div>
 </template>
 
