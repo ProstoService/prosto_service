@@ -40,25 +40,33 @@ export default {
   // eslint-disable-next-line no-unused-vars
   beforeRouteEnter(to, from, next) {
     axios
-      .get("./static/content/about.json")
+      .get("./static/content/about.json", { responseType: "json" })
       .then(response => {
+        if (response.data == null) {
+          next(new Error());
+          return;
+        }
+
         next(vm => vm.setData(response.data));
       })
       .catch(error => {
-        console.log(error);
-        next("/404");
+        next(error);
       });
   },
   // eslint-disable-next-line no-unused-vars
   beforeRouteUpdate(to, from, next) {
     axios
-      .get("./static/content/about.json")
+      .get("./static/content/about.json", { responseType: "json" })
       .then(response => {
+        if (response.data == null) {
+          next(new Error());
+          return;
+        }
+
         next(vm => vm.setData(response.data));
       })
       .catch(error => {
-        console.log(error);
-        next("/404");
+        next(error);
       });
   },
   methods: {

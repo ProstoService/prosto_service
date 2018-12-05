@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueProgressBar from "vue-progressbar";
+import ErrorPage from "vue-error-page";
 import jquery from "jquery";
 
 import App from "./App.vue";
@@ -9,6 +10,7 @@ window.$ = window.jQuery = jquery;
 
 Vue.config.productionTip = false;
 
+Vue.use(ErrorPage);
 Vue.use(VueProgressBar, {
   color: "rgb(33, 133, 208)",
   failedColor: "red",
@@ -20,7 +22,7 @@ Vue.use(VueProgressBar, {
   }
 });
 
-new Vue({
+window.eventBus = new Vue({
   el: "#app",
   router,
   render: h => h(App)

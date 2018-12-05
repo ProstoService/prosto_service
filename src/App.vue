@@ -33,6 +33,13 @@ export default {
     this.$router.afterEach((to, from) => {
       this.$Progress.finish();
     });
+
+    this.$router.onError(() => {
+      this.$_error(() => import("@/views/ErrorPage"), {
+        text: "Кажется что-то пошло не так. Скоро все снова заработает!"
+      });
+      this.$Progress.fail();
+    });
   }
 };
 </script>

@@ -32,23 +32,33 @@ export default {
   // eslint-disable-next-line no-unused-vars
   beforeRouteEnter(to, from, next) {
     axios
-      .get("/static/content/products.json")
+      .get("/static/content/products.json", { responseType: "json" })
       .then(response => {
+        if (response.data == null) {
+          next(new Error());
+          return;
+        }
+
         next(vm => vm.setProducts(response.data.products));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   // eslint-disable-next-line no-unused-vars
   beforeRouteUpdate(to, from, next) {
     axios
-      .get("/static/content/products.json")
+      .get("/static/content/products.json", { responseType: "json" })
       .then(response => {
+        if (response.data == null) {
+          next(new Error());
+          return;
+        }
+
         next(vm => vm.setProducts(response.data.products));
       })
       .catch(error => {
-        console.log(error);
+        next(error);
       });
   },
   methods: {

@@ -7,7 +7,7 @@ const About = () => import("@/views/About");
 const Services = () => import("@/views/Services");
 const Products = () => import("@/views/Products");
 const Contacts = () => import("@/views/Contacts");
-const NotFound = () => import("@/views/NotFound");
+const NotFound = () => import("@/views/ErrorPage");
 
 Vue.use(Router);
 
@@ -67,6 +67,7 @@ const router = new Router({
           path: "",
           name: "NotFound",
           component: NotFound,
+          props: { payload: { text: "Страница не найдена..." } },
           meta: {
             title: "Страница не найдена"
           }

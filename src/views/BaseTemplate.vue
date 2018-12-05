@@ -2,9 +2,7 @@
   <div>
     <div class="pusher">
       <main-menu />
-      <main class="ui text expanded container" style="margin-top: 4rem;">
-        <router-view />
-      </main>
+      <main class="ui text expanded container"><app-view /></main>
     </div>
   </div>
 </template>
@@ -22,6 +20,7 @@ export default {
 
 <style scoped>
 .expanded {
+  margin-top: 4rem;
   padding-bottom: 1.5rem;
 }
 </style>
