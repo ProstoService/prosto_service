@@ -49,6 +49,7 @@
 
 <script>
 import $ from "jquery";
+import "semantic-ui-css/components/sidebar.min.js";
 
 export default {
   name: "MainMenu",
