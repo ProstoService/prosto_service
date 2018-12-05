@@ -12,12 +12,13 @@ script:
 
 deploy:
   provider: pages
-  project-name: ProstoService/prosto_service
-  repo: ProstoService/prostoservice.github.io
-  local-dir: dist/
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  target-branch: master
-  keep-history: true
   on:
     branch: master
+  target-branch: master
+  local-dir: ${TRAVIS_BUILD_DIR}/dist
+  fqdn: prost-service.ru
+  project-name: ProstoService/prosto_service
+  repo: ProstoService/prostoservice.github.io
+  keep-history: true
