@@ -8,6 +8,10 @@
         {
             "image": "/static/img/products/lock.jpg",
             "name": "Замки"
+        },
+        {
+            "image": "/static/img/products/keychain.jpg",
+            "name": "Брелки"
         }
     ]
 }
