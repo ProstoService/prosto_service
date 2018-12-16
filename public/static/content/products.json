@@ -17,5 +17,9 @@
             "image": "/static/img/products/keyboards.jpg",
             "name": "Ключницы"
         }
+        {
+            "image": "/static/img/products/batteries.jpg",
+            "name": "Батарейки"
+        }
     ]
 }
