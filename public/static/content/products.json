@@ -12,6 +12,10 @@
         {
             "image": "/static/img/products/keychain.jpg",
             "name": "Брелки"
+        },
+        {
+            "image": "/static/img/products/keyboards.jpg",
+            "name": "Ключницы"
         }
     ]
 }
